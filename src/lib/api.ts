@@ -28,7 +28,7 @@ export interface MeetingPayload {
   startDateTime: string;
 }
 
-const API_BASE_URL = 'http://localhost:3000/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
 
 function buildUrl(path: string): string {
   return `${API_BASE_URL}${path.startsWith('/') ? path : '/' + path}`;
