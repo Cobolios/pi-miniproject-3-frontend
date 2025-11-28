@@ -1,0 +1,125 @@
+// Pages/Login/Login.scss
+
+.auth-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f0f4f9;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-card {
+  background: white;
+  width: 100%;
+  max-width: 448px; // Google auth standard width
+  padding: 48px 40px 36px;
+  border-radius: 28px; // Modern rounded look
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media (max-width: 480px) {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    padding: 24px;
+    justify-content: center;
+  }
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 12px;
+
+  .logo-img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 16px;
+    object-fit: contain;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+  }
+
+  p {
+    color: var(--text-tertiary);
+    font-size: 16px;
+  }
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--text-tertiary);
+  font-size: 14px;
+  margin: 8px 0;
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  &::before { margin-right: .5em; }
+  &::after { margin-left: .5em; }
+}
+
+.social-buttons {
+  display: flex;
+  gap: 12px;
+  
+  button {
+    flex: 1;
+    font-size: 14px;
+  }
+}
+
+.auth-footer-link {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--text-secondary);
+
+  a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 4px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.error-banner {
+  background-color: #fce8e6;
+  color: #c5221f;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
